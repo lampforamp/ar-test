@@ -112,6 +112,10 @@ function update() // Обновление состояния ARToolkit
 {
     if ( arToolkitSource.ready !== false )
         arToolkitContext.update( arToolkitSource.domElement );
+
+    // Интерполяция или сглаживание движения объекта
+    let interpolatedPosition = new THREE.Vector3().lerpVectors(oldPosition, newPosition, 0.5); // Пример сглаживания позиции
+        markerRoot1.position.copy(interpolatedPosition);
 }
 
 function render() // Рендеринг сцены
