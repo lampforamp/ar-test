@@ -81,7 +81,7 @@ function initialize()
     // Настройка контекста AR
     arToolkitContext = new THREEx.ArToolkitContext({
         cameraParametersUrl: 'data/camera_para.dat',
-        detectionMode: 'mono and matrix'
+        detectionMode: 'mono_and_matrix'
     });
     
     arToolkitContext.init( function onCompleted(){ // Копирование матрицы проекции камеры
