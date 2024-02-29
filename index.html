@@ -88,11 +88,14 @@ function initialize()
         camera.projectionMatrix.copy( arToolkitContext.getProjectionMatrix() );
     });
 
+    const patternUrl = "data/qrMarker2.patt"
+    document.write(patternUrl)
+
     // Создание маркеров
     markerRoot1 = new THREE.Group();
     scene.add(markerRoot1);
     let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
-        type: 'pattern', patternUrl: "data/defaultMarker.patt",
+        type: 'pattern', patternUrl,
     })
 
     let geometry1  = new THREE.SphereGeometry(1,10,10); // Создание геометрии куба
